@@ -1,13 +1,21 @@
 class TasksController < ApplicationController
   def create
-  	Task.create(task_params)
+  	@task = Task.new(task_params)
+
+  	if @task.save
+  		render json: @task
+  	else
+  		render json: @task.errors, status: 422
+  	end
   end
 
   def index
+  	@tasks = Task.all
+  	render json: @tasks
   end
 
   private
   def task_params
-  	params.require(:task).permit(:title);
+  	params.require(:task).permit(:title)
 	end
 end
