@@ -1,8 +1,8 @@
 TD.Views.TasksListView = Backbone.View.extend({
 
-	events: {
-		"click li.task": "showTask"
-	},
+	// events: {
+	// 	"click li.task": "showTask"
+	// },
 
 	render: function(){
 		var that= this;
@@ -13,9 +13,9 @@ TD.Views.TasksListView = Backbone.View.extend({
 		// 			$("<li></li>").text(task.get("title"))
 		// 		);
 		// });
-	var renderedContent = JST["tasks/list"]({
-		tasks: that.collection
-	});
+		var renderedContent = JST["tasks/list"]({
+			tasks: that.collection
+		});
 
 		// that.$el.html(ul);
 		that.$el.html(renderedContent);
