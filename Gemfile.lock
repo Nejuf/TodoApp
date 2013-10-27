@@ -33,7 +33,6 @@ GEM
       ejs
       jquery-rails
       rails (>= 3.1)
-    bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.1.4)
     capybara (2.1.0)
@@ -75,7 +74,6 @@ GEM
       railties (>= 3.0.0)
     faker (1.2.0)
       i18n (~> 0.5)
-    ffi (1.9.0)
     ffi (1.9.0-x86-mingw32)
     formatador (0.2.4)
     guard (2.2.2)
@@ -111,15 +109,9 @@ GEM
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
-    nokogiri (1.6.0)
-      mini_portile (~> 0.5.0)
     nokogiri (1.6.0-x86-mingw32)
       mini_portile (~> 0.5.0)
     polyglot (0.3.3)
-    pry (0.9.12.2)
-      coderay (~> 1.0.5)
-      method_source (~> 0.8)
-      slop (~> 3.4)
     pry (0.9.12.2-x86-mingw32)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -210,6 +202,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   debugger
+  ejs
   factory_girl_rails
   faker
   guard-rspec
