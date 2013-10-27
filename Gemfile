@@ -56,3 +56,5 @@ group :test do
 	gem 'launchy'
 	gem 'shoulda-matchers'
 end
+
+gem 'backbone-on-rails'
