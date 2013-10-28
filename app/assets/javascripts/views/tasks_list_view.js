@@ -4,6 +4,15 @@ TD.Views.TasksListView = Backbone.View.extend({
 	// 	"click li.task": "showTask"
 	// },
 
+	initialize: function(){
+		var that = this;
+
+		var renderCallback = that.render.bind(that);
+		that.listenTo(that.collection, "add", renderCallback);
+		that.listenTo(that.collection, "change", renderCallback);
+		that.listenTo(that.collection, "remove", renderCallback);
+	},
+
 	render: function(){
 		var that= this;
 
@@ -22,11 +31,11 @@ TD.Views.TasksListView = Backbone.View.extend({
 		return that;
 	},
 
-	showTask: function(event){
-		console.log(
-			"You clicked task #" + 
-				$(event.currentTarget).attr("data-id")
-		);
-	}
+	// showTask: function(event){
+	// 	console.log(
+	// 		"You clicked task #" + 
+	// 			$(event.currentTarget).attr("data-id")
+	// 	);
+	// }
 
 });
