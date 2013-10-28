@@ -11,8 +11,15 @@ TD.Views.NewTaskView = Backbone.View.extend({
 		return that;		
 	},
 
-	submit: function(){
-		console.log("Yo dawg, I heard you like saving models.");
+	submit: function(event){
+		var that = this;
+
+		var formData = $("form").has(event.currentTarget).serializeJSON();
+		
+		var task = new TD.Models.Task(formData.task);
+
+		that.collection.add(task);
+		Backbone.history.navigate("#/");
 	}
 
 });
